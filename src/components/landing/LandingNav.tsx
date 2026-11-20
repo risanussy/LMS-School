@@ -18,7 +18,7 @@ export function LandingNav() {
           <span className="font-display text-xl font-semibold tracking-tight">Aksara</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm text-white/80 md:flex">
+        <nav className="hidden items-center gap-6 text-sm text-white/80 lg:flex">
           <a href="#fitur" className="hover:text-white">
             Fitur
           </a>
@@ -31,9 +31,21 @@ export function LandingNav() {
           <a href="#peran" className="hover:text-white">
             Peran
           </a>
+          <Link href="/profil" className="hover:text-white">
+            Profil
+          </Link>
+          <Link href="/berita" className="hover:text-white">
+            Berita
+          </Link>
+          <Link href="/ppdb" className="hover:text-white">
+            PPDB
+          </Link>
+          <Link href="/layanan" className="hover:text-white">
+            Layanan
+          </Link>
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <Button href="/login" variant="ghost" className="text-white hover:bg-white/10">
             Masuk
           </Button>
@@ -44,7 +56,7 @@ export function LandingNav() {
 
         <button
           type="button"
-          className="rounded-xl bg-white/10 p-2 text-white md:hidden"
+          className="rounded-xl bg-white/10 p-2 text-white lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Menu"
         >
@@ -53,7 +65,7 @@ export function LandingNav() {
       </div>
 
       {open ? (
-        <div className="mx-4 rounded-2xl border border-white/10 bg-ink/95 p-4 text-white backdrop-blur md:hidden">
+        <div className="mx-4 rounded-2xl border border-white/10 bg-ink/95 p-4 text-white backdrop-blur lg:hidden">
           <div className="flex flex-col gap-3 text-sm">
             <a href="#fitur" onClick={() => setOpen(false)}>
               Fitur
@@ -67,6 +79,18 @@ export function LandingNav() {
             <a href="#peran" onClick={() => setOpen(false)}>
               Peran
             </a>
+            <Link href="/profil" onClick={() => setOpen(false)}>
+              Profil
+            </Link>
+            <Link href="/berita" onClick={() => setOpen(false)}>
+              Berita
+            </Link>
+            <Link href="/ppdb" onClick={() => setOpen(false)}>
+              PPDB
+            </Link>
+            <Link href="/layanan" onClick={() => setOpen(false)}>
+              Layanan
+            </Link>
             <Button href="/login" variant="accent" className="mt-2 w-full">
               Masuk / Demo
             </Button>

@@ -25,6 +25,11 @@ export const adminNav: NavItem[] = [
   { label: "Keuangan", href: "/admin/keuangan", icon: "solar:wallet-money-bold-duotone" },
   { label: "Cuti", href: "/admin/cuti", icon: "solar:calendar-mark-bold-duotone" },
   { label: "Pengumuman", href: "/admin/pengumuman", icon: "solar:bell-bing-bold-duotone" },
+  { label: "Bank Soal", href: "/admin/bank-soal", icon: "solar:notebook-bold-duotone" },
+  { label: "Absensi QR", href: "/admin/absensi-qr", icon: "solar:qr-code-bold-duotone" },
+  { label: "Laporan", href: "/admin/laporan", icon: "solar:chart-2-bold-duotone" },
+  { label: "Multi Sekolah", href: "/admin/multi-sekolah", icon: "solar:buildings-2-bold-duotone" },
+  { label: "Integrasi", href: "/admin/integrasi", icon: "solar:link-circle-bold-duotone" },
   { label: "Pengaturan", href: "/admin/pengaturan", icon: "solar:settings-bold-duotone" },
 ];
 
@@ -36,6 +41,9 @@ export const guruNav: NavItem[] = [
   { label: "Siswa", href: "/guru/siswa", icon: "solar:users-group-rounded-bold-duotone" },
   { label: "Absensi", href: "/guru/absensi", icon: "solar:checklist-minimalistic-bold-duotone" },
   { label: "Nilai", href: "/guru/nilai", icon: "solar:chart-bold-duotone" },
+  { label: "Bank Soal", href: "/guru/bank-soal", icon: "solar:notebook-bold-duotone" },
+  { label: "Auto Grade", href: "/guru/auto-grade", icon: "solar:magic-stick-3-bold-duotone" },
+  { label: "Pesan", href: "/guru/pesan", icon: "solar:chat-round-dots-bold-duotone" },
   { label: "Pengaturan", href: "/guru/pengaturan", icon: "solar:settings-bold-duotone" },
 ];
 
@@ -47,6 +55,8 @@ export const siswaNav: NavItem[] = [
   { label: "Nilai", href: "/siswa/nilai", icon: "solar:chart-bold-duotone" },
   { label: "Tugas", href: "/siswa/tugas", icon: "solar:clipboard-list-bold-duotone" },
   { label: "Ujian", href: "/siswa/ujian", icon: "solar:document-text-bold-duotone" },
+  { label: "Rapor", href: "/siswa/rapor", icon: "solar:diploma-bold-duotone" },
+  { label: "Scan QR", href: "/siswa/absensi-qr", icon: "solar:qr-code-bold-duotone" },
   { label: "Pengaturan", href: "/siswa/pengaturan", icon: "solar:settings-bold-duotone" },
 ];
 
@@ -59,6 +69,8 @@ export const parentNav: NavItem[] = [
   { label: "Keuangan", href: "/orang-tua/keuangan", icon: "solar:wallet-money-bold-duotone" },
   { label: "Pengumuman", href: "/orang-tua/pengumuman", icon: "solar:bell-bing-bold-duotone" },
   { label: "Pesan", href: "/orang-tua/pesan", icon: "solar:chat-round-dots-bold-duotone" },
+  { label: "Rapor", href: "/orang-tua/rapor", icon: "solar:diploma-bold-duotone" },
+  { label: "Live", href: "/orang-tua/live", icon: "solar:radar-2-bold-duotone" },
   { label: "Pengaturan", href: "/orang-tua/pengaturan", icon: "solar:settings-bold-duotone" },
 ];
 

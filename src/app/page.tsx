@@ -65,6 +65,15 @@ const prestasi = [
   },
 ];
 
+const solusi = [
+  { icon: "solar:question-circle-bold-duotone", title: "Bank Soal", desc: "Kumpulan soal terkurasi per mapel dan tingkat kesulitan." },
+  { icon: "solar:check-read-bold-duotone", title: "Auto Grade", desc: "Penilaian otomatis pilihan ganda dengan rekap instan." },
+  { icon: "solar:qr-code-bold-duotone", title: "QR Absensi", desc: "Presensi siswa cukup dengan memindai kode QR." },
+  { icon: "solar:card-bold-duotone", title: "Payment Gateway", desc: "Bayar SPP lewat VA, e-wallet, dan QRIS dengan status real-time." },
+  { icon: "solar:buildings-2-bold-duotone", title: "Multi Sekolah", desc: "Kelola banyak sekolah atau cabang dalam satu akun yayasan." },
+  { icon: "solar:hand-heart-bold-duotone", title: "Managed Service", desc: "Pendampingan, training, dan support ber-SLA dari ION EDU." },
+];
+
 const roles = [
   {
     title: "Admin Sekolah",
@@ -125,8 +134,8 @@ export default function HomePage() {
         {/* Gambar hero — bottom 0, besar */}
         <div className="pointer-events-none absolute bottom-0 right-0 z-10 w-full md:w-[48%] lg:w-[50%]">
           <Image
-            src="/images/hero-sma.png"
-            alt="Siswa SMA belajar bersama dengan tablet"
+            src="/images/hero-casual.jpg"
+            alt="Anak-anak berpakaian santai belajar dan tersenyum bersama"
             width={1400}
             height={900}
             priority
@@ -286,6 +295,37 @@ export default function HomePage() {
                 Tailwind + Iconify siap produksi
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="solusi" className="border-t border-line bg-ink text-white">
+        <div className="mx-auto max-w-6xl px-4 py-20 md:px-6">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm uppercase tracking-[0.2em] text-accent">Solusi ION EDU</p>
+              <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
+                Lebih lengkap dengan ekosistem ION EDU
+              </h2>
+              <p className="mt-3 text-sm text-white/65 md:text-base">
+                Fitur tambahan yang menyempurnakan Aksara — dari bank soal hingga layanan terkelola.
+              </p>
+            </div>
+            <Button href="/layanan" variant="accent" className="px-5 py-3">
+              Lihat layanan
+              <Icon icon="solar:arrow-right-linear" width={18} height={18} />
+            </Button>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {solusi.map((item) => (
+              <article key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+                <div className="mb-4 inline-flex rounded-2xl bg-white/10 p-3 text-accent">
+                  <Icon icon={item.icon} width={26} height={26} />
+                </div>
+                <h3 className="font-display text-lg font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/65">{item.desc}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
