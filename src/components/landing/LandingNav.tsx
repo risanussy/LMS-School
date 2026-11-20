@@ -22,11 +22,14 @@ export function LandingNav() {
           <a href="#fitur" className="hover:text-white">
             Fitur
           </a>
+          <a href="#kegiatan" className="hover:text-white">
+            Kegiatan
+          </a>
+          <a href="#prestasi" className="hover:text-white">
+            Prestasi
+          </a>
           <a href="#peran" className="hover:text-white">
             Peran
-          </a>
-          <a href="#alur" className="hover:text-white">
-            Alur
           </a>
         </nav>
 
@@ -55,11 +58,14 @@ export function LandingNav() {
             <a href="#fitur" onClick={() => setOpen(false)}>
               Fitur
             </a>
+            <a href="#kegiatan" onClick={() => setOpen(false)}>
+              Kegiatan
+            </a>
+            <a href="#prestasi" onClick={() => setOpen(false)}>
+              Prestasi
+            </a>
             <a href="#peran" onClick={() => setOpen(false)}>
               Peran
-            </a>
-            <a href="#alur" onClick={() => setOpen(false)}>
-              Alur
             </a>
             <Button href="/login" variant="accent" className="mt-2 w-full">
               Masuk / Demo

@@ -26,6 +26,45 @@ const features = [
   },
 ];
 
+const kegiatan = [
+  {
+    src: "/images/kegiatan-kelas.jpg",
+    title: "Belajar Kolaboratif",
+    desc: "Praktik sains dan proyek kelas yang aktif.",
+    span: "md:col-span-2 md:row-span-2",
+  },
+  {
+    src: "/images/kegiatan-olahraga.jpg",
+    title: "Hari Olahraga",
+    desc: "Semangat kompetisi sehat di lapangan.",
+    span: "",
+  },
+  {
+    src: "/images/kegiatan-budaya.jpg",
+    title: "Pentas Budaya",
+    desc: "Tari dan seni tradisional di panggung sekolah.",
+    span: "",
+  },
+];
+
+const prestasi = [
+  {
+    src: "/images/prestasi-olimpiade.jpg",
+    title: "Juara Olimpiade Sains",
+    desc: "Medali emas tingkat kota.",
+  },
+  {
+    src: "/images/prestasi-debat.jpg",
+    title: "Tim Debat Bahasa",
+    desc: "Finalis kompetisi antar sekolah.",
+  },
+  {
+    src: "/images/prestasi-robotik.jpg",
+    title: "Klub Robotik",
+    desc: "Proyek unggulan pameran STEM.",
+  },
+];
+
 const roles = [
   {
     title: "Admin Sekolah",
@@ -113,6 +152,75 @@ export default function HomePage() {
               <p className="mt-2 text-sm leading-relaxed text-muted">{item.desc}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="kegiatan" className="border-t border-line bg-ink text-white">
+        <div className="mx-auto max-w-6xl px-4 py-20 md:px-6">
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-accent">Kegiatan sekolah</p>
+            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
+              Ruang belajar yang hidup di luar layar
+            </h2>
+            <p className="mt-3 text-sm text-white/65 md:text-base">
+              Dokumentasi kegiatan harian siswa — dari kelas, olahraga, hingga pentas budaya.
+            </p>
+          </div>
+
+          <div className="mt-10 grid auto-rows-[240px] gap-4 md:grid-cols-3 md:auto-rows-[260px]">
+            {kegiatan.map((item) => (
+              <figure
+                key={item.title}
+                className={`group relative overflow-hidden rounded-[1.5rem] ${item.span}`}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 via-ink/40 to-transparent p-5 pt-16">
+                  <p className="font-display text-lg font-semibold">{item.title}</p>
+                  <p className="mt-1 text-sm text-white/70">{item.desc}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="prestasi" className="bg-mist">
+        <div className="mx-auto max-w-6xl px-4 py-20 md:px-6">
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-sea">Prestasi siswa</p>
+            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
+              Apresiasi capaian yang membanggakan
+            </h2>
+            <p className="mt-3 text-sm text-muted md:text-base">
+              Jejak prestasi akademik dan non-akademik yang menumbuhkan rasa percaya diri siswa.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {prestasi.map((item) => (
+              <figure key={item.title} className="group">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem]">
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className="mt-4">
+                  <p className="font-display text-xl font-semibold text-ink">{item.title}</p>
+                  <p className="mt-1 text-sm text-muted">{item.desc}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
