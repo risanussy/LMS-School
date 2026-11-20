@@ -57,12 +57,12 @@ export default function HomePage() {
   return (
     <div className="bg-mist text-ink">
       <section className="relative min-h-[100svh] overflow-hidden grain text-white">
-        <div className="mesh absolute inset-0 opacity-40" />
+        <div className="pointer-events-none mesh absolute inset-0 opacity-40" />
         <LandingNav />
 
         {/* Teks header — vertikal center */}
-        <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl items-center px-4 pb-56 pt-28 md:px-6 md:pb-0 md:pt-0">
-          <div className="w-full max-w-lg md:max-w-xl">
+        <div className="pointer-events-none relative z-20 mx-auto flex min-h-[100svh] max-w-7xl items-center px-4 pb-56 pt-28 md:px-6 md:pb-0 md:pt-0">
+          <div className="pointer-events-auto w-full max-w-lg md:max-w-xl">
             <p className="animate-rise text-sm uppercase tracking-[0.28em] text-accent">LMS Sekolah</p>
             <h1 className="animate-rise delay-1 mt-4 font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
               Aksara
