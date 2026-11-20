@@ -12,7 +12,7 @@ type Props = {
 };
 
 const variants: Record<Variant, string> = {
-  primary: "bg-ink text-white hover:bg-ink-soft",
+  primary: "bg-ink !text-white hover:bg-ink-soft hover:!text-white [&_svg]:!text-white",
   secondary: "bg-foam text-ink hover:bg-sand",
   ghost: "bg-transparent text-ink hover:bg-foam",
   accent: "bg-accent text-ink hover:bg-accent-deep hover:text-white",
