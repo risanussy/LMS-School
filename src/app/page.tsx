@@ -108,9 +108,8 @@ export default function HomePage() {
         <div className="pointer-events-none mesh absolute inset-0 opacity-40" />
         <LandingNav />
 
-        {/* Teks header — vertikal center */}
-        <div className="pointer-events-none relative z-20 mx-auto flex min-h-[100svh] max-w-7xl items-center px-4 pb-56 pt-28 md:px-6 md:pb-0 md:pt-0">
-          <div className="pointer-events-auto w-full max-w-lg md:max-w-xl">
+        <div className="relative z-20 mx-auto grid min-h-[100svh] max-w-7xl items-center gap-10 px-4 pb-16 pt-28 md:grid-cols-2 md:gap-12 md:px-6 md:pb-10 md:pt-24">
+          <div className="max-w-xl">
             <p className="animate-rise text-sm uppercase tracking-[0.28em] text-accent">LMS Sekolah</p>
             <h1 className="animate-rise delay-1 mt-4 font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
               Aksara
@@ -129,18 +128,17 @@ export default function HomePage() {
               </Button>
             </div>
           </div>
-        </div>
 
-        {/* Gambar hero — bottom 0, besar */}
-        <div className="pointer-events-none absolute bottom-0 right-0 z-10 w-full md:w-[48%] lg:w-[50%]">
-          <Image
-            src="/images/hero-casual.png"
-            alt="Anak-anak berpakaian santai belajar dan tersenyum bersama"
-            width={557}
-            height={691}
-            priority
-            className="ml-auto block h-auto w-[min(100%,360px)] object-contain object-bottom drop-shadow-[0_24px_48px_rgba(0,0,0,0.35)] sm:w-[min(100%,440px)] md:w-[85%] lg:w-[90%]"
-          />
+          <div className="animate-rise delay-2 justify-self-center md:justify-self-end">
+            <Image
+              src="/images/hero-casual.jpg"
+              alt="Tiga pelajar berpakaian santai di halaman sekolah"
+              width={1024}
+              height={682}
+              priority
+              className="h-auto w-full max-w-[520px] rounded-[2rem] object-cover shadow-[0_28px_60px_rgba(0,0,0,0.35)] ring-1 ring-white/15 md:max-w-[560px] lg:max-w-[620px]"
+            />
+          </div>
         </div>
       </section>
 
