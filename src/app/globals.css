@@ -1,26 +1,136 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #071a24;
+  --ink-soft: #123040;
+  --sea: #0c7c82;
+  --sea-bright: #12a5ad;
+  --foam: #e8f4f5;
+  --mist: #f3fafb;
+  --sand: #d7e6e8;
+  --accent: #e8943a;
+  --accent-deep: #c6721f;
+  --success: #1f8a5b;
+  --warning: #d97706;
+  --danger: #c23b3b;
+  --surface: #ffffff;
+  --muted: #5a7380;
+  --line: rgba(7, 26, 36, 0.08);
+  --shadow: 0 18px 50px rgba(7, 26, 36, 0.08);
+  --radius: 1rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-sea: var(--sea);
+  --color-sea-bright: var(--sea-bright);
+  --color-foam: var(--foam);
+  --color-mist: var(--mist);
+  --color-sand: var(--sand);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--mist);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--sea) 30%, white);
+}
+
+.grain {
+  background-image:
+    radial-gradient(circle at 18% 20%, rgba(18, 165, 173, 0.22), transparent 28%),
+    radial-gradient(circle at 82% 12%, rgba(232, 148, 58, 0.18), transparent 24%),
+    linear-gradient(160deg, #071a24 0%, #0c3d4a 48%, #0c7c82 100%);
+}
+
+.mesh {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.soft-panel {
+  background: color-mix(in oklab, white 88%, var(--foam));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.7s ease both;
+}
+
+.animate-floaty {
+  animation: floaty 5s ease-in-out infinite;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
 }
