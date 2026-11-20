@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
 import { DataTable } from "@/components/ui/DataTable";
 import { Icon } from "@/components/ui/Icon";
 import { PageHeader } from "@/components/ui/PageHeader";
@@ -86,13 +85,6 @@ export default function GuruNilaiPage() {
           },
         ]}
       />
-
-      <div className="mt-4 flex justify-end">
-        <Button variant="accent">
-          <Icon icon="solar:pen-new-square-bold-duotone" width={18} height={18} />
-          Input Nilai
-        </Button>
-      </div>
     </div>
   );
 }
