@@ -134,12 +134,12 @@ export default function HomePage() {
         {/* Gambar hero — bottom 0, besar */}
         <div className="pointer-events-none absolute bottom-0 right-0 z-10 w-full md:w-[48%] lg:w-[50%]">
           <Image
-            src="/images/hero-casual.jpg"
+            src="/images/hero-casual.png"
             alt="Anak-anak berpakaian santai belajar dan tersenyum bersama"
-            width={1400}
-            height={900}
+            width={557}
+            height={691}
             priority
-            className="ml-auto block h-auto w-[min(100%,380px)] object-contain object-bottom mix-blend-screen sm:w-[min(100%,460px)] md:w-[92%] lg:w-[95%]"
+            className="ml-auto block h-auto w-[min(100%,360px)] object-contain object-bottom drop-shadow-[0_24px_48px_rgba(0,0,0,0.35)] sm:w-[min(100%,440px)] md:w-[85%] lg:w-[90%]"
           />
         </div>
       </section>
